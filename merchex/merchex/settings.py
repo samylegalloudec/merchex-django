@@ -30,6 +30,14 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+PROJECT_APPS = (
+'MyApp'
+)
+JENKINS_TASKS = (
+'django_jenkins.tasks.run_pep8',
+'django_jenkins.tasks.run_pyflakes'
+)
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'listings',
 ]
 
 MIDDLEWARE = [
