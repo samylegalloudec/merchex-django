@@ -7,7 +7,8 @@ from django.shortcuts import render
 
 def hello(request):
     bands = Band.objects.all()
-    return render(request, 'listings/hello.html)')
+    return render(request, 'listings/hello.html',
+    {'bands':bands})
 
 def get_my_value(request, value):
     return HttpResponse('<p>Test<p>' + str(value))
